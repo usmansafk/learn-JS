@@ -9,7 +9,7 @@
   <body>
     <a href="about.html">About Page</a>
     <h1>Hello World</h1>
-    <button class="btn">click me!</button>
+    <button class="btn" onclick="alert('Inline!')">click me!</button>
     <button class="btn">click me!</button>
     <button class="btn">click me!</button>
     <button class="btn">click me!</button>
@@ -17,6 +17,12 @@
     <button class="btn">click me!</button>
     <button class="btn">click me!</button>
 
-    <script src="./app.js"></script>
+    <script>
+      document.querySelectorAll(".btn").forEach((element) => {
+        element.addEventListener("click", () => {
+          alert("Internal");
+        });
+      });
+    </script>
   </body>
 </html>
