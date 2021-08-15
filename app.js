@@ -2,23 +2,25 @@
 //Store/Access/Modify === Value
 //Declare, Assignment Operator, Assign Value
 
-// console.log("Usman Sajid VI");
-// //some code here
-// console.log("Usman Sajid");
-// //some code here
-// console.log("Usman Sajid");
-// //some code here
-// console.log("Usman Sajid");
-// //some code here
-// console.log("Usman Sajid");
+// Can contain digits, letters, underscore, $
+// Must start with letter $ or _
+// No keywords allowed
+// Can't start with number
+// Case sensitive
+// camelCase or underscore preffered
 
-let name = "usman";
-let address, postcode, country;
+let random123_$ = "random string";
+console.log(random123_$);
 
-address = "212 Bixie Lane";
-postcode = "G99 ZXC";
-country = "Scotland";
+// cant do this!
+let let = "random";
 
-name = "namsu";
-console.log(address, postcode, country);
-console.log(name);
+//conventions
+let firstName;
+let first_name;
+
+
+
+
+
+
