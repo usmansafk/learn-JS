@@ -2,25 +2,15 @@
 //Store/Access/Modify === Value
 //Declare, Assignment Operator, Assign Value
 
-// Can contain digits, letters, underscore, $
-// Must start with letter $ or _
-// No keywords allowed
-// Can't start with number
-// Case sensitive
-// camelCase or underscore preffered
+// Declare Variables with let or CONST or VAR
+var value = "some value";
+let name = "Usman";
+const LASTNAME = "Sajid";
 
-let random123_$ = "random string";
-console.log(random123_$);
+//wont work - CANT reassign or just declare, must init
+// LASTNAME = "lol";
+// const TEST;
 
-// cant do this!
-let let = "random";
-
-//conventions
-let firstName;
-let first_name;
-
-
-
-
-
-
+console.log(value);
+console.log(name);
+console.log(LASTNAME);
