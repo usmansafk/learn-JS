@@ -1,5 +1,3 @@
-document.querySelectorAll(".btn").forEach((element) => {
-  element.addEventListener("click", () => {
-    alert("External");
-  });
-});
+document.write("hello world");
+// alert("hello world");
+console.log("hello world");
