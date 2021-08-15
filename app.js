@@ -1,5 +1,17 @@
-document.write("hello world");
-alert("hello world");
-console.log("hello world");
+// I woke up early today.
+// statements - sets of instructions
+// comments  - shortcut Command + /
 
-//These three are what you call helper methods and are extremely useful
+console.log("hello");
+console.log("hello usman");
+console.log("usman is afk");
+console.log("lame...");
+
+// this is a comment
+//cmnd /
+
+/*
+this is a multi
+line
+comment
+*/
