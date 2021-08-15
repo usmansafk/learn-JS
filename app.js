@@ -1,17 +1,25 @@
-// I woke up early today.
-// statements - sets of instructions
-// comments  - shortcut Command + /
+//Variables
+//Store/Access/Modify === Value
+//Declare, Assignment Operator, Assign Value
 
-console.log("hello");
-console.log("hello usman");
-console.log("usman is afk");
-console.log("lame...");
+// console.log("Usman Sajid VI");
+// //some code here
+// console.log("Usman Sajid");
+// //some code here
+// console.log("Usman Sajid");
+// //some code here
+// console.log("Usman Sajid");
+// //some code here
+// console.log("Usman Sajid");
 
-// this is a comment
-//cmnd /
-
-/*
-this is a multi
-line
-comment
-*/
+let name = "usman";
+console.log(name);
+//some code here
+console.log(name);
+//some code here
+console.log(name);
+//some code here
+console.log(name);
+//some code here
+console.log(name);
+//some code here
