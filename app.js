@@ -1,18 +1,14 @@
-//Conditional Operators
-// > < >=  <= == === != !==
+//Equality
+// == === != !==
+
+// == checks only value
+// === checks value AND type
 
 const num1 = 6;
-const num2 = 6;
-const result = num1 >= num2;
+const num2 = "6";
 
-const value = false;
+const value = num1 == num2;
+const value2 = num1 === num2;
 
-if (!value) {
-  console.log("The not operator is always the opposite");
-}
-
-if (result) {
-  console.log("first num is greater");
-} else {
-  console.log("second num is greater");
-}
+console.log(value);
+console.log(value2);
