@@ -1,27 +1,17 @@
-//Arrays
-// Arrays - [], 0 index based
-// Arrays offer an easy way to store a list of items and also access / perform various actions with ease
-// inside the array, you can store strings, numbers, booleans, functions, objects etc.
-// separate each element with a comma
-// if you try to access an array item thats beyond the length of the array, you will get undefined
+//Functions - declare/invoke
+//Allow you to write code in one place and then reuse that code all throughout your application without having to copy/paste
 
-const friend1 = "bob";
-const friend2 = "bob";
-const friend3 = "bob";
-const friend4 = "bob";
+//to declare a function, use the function keyword,
+//give it a name,
+//then give it () , these can also take paramaters
+//then open and close curly brace {}
+//inside the braces goes the logic
 
-//instead use an array:
-const friends = ["bob", "james", "troll", 45, undefined, null];
+//declare
+function sayHello() {
+  //logic
+  console.log("Hello");
+}
 
-console.log(friends); // whole array
-console.log(friends[1]); //james
-console.log(friends[10]); //undefined
-
-//assign array element to variable:
-const bestFriend = friends[2];
-console.log(bestFriend); // troll
-
-//change value in array:
-friends[3] = 50;
-console.log(friends[3]);
-console.log(friends);
+//to invoke:
+sayHello();
