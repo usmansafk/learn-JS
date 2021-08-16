@@ -1,36 +1,27 @@
-// Data Types - 7 Total
-// Primitive — String, Numbers, Boolean, Null, Undefined, Symbol
-// Objects — Arrays, Functions, Objects
+//Arrays
+// Arrays - [], 0 index based
+// Arrays offer an easy way to store a list of items and also access / perform various actions with ease
+// inside the array, you can store strings, numbers, booleans, functions, objects etc.
+// separate each element with a comma
+// if you try to access an array item thats beyond the length of the array, you will get undefined
 
-// the typeof operator — (typeof variable) (typeof value)
+const friend1 = "bob";
+const friend2 = "bob";
+const friend3 = "bob";
+const friend4 = "bob";
 
-//String
-const text = "some text";
+//instead use an array:
+const friends = ["bob", "james", "troll", 45, undefined, null];
 
-//Number
-const num = 45;
+console.log(friends); // whole array
+console.log(friends[1]); //james
+console.log(friends[10]); //undefined
 
-//Boolean
-let value1 = true;
-let value2 = false;
+//assign array element to variable:
+const bestFriend = friends[2];
+console.log(bestFriend); // troll
 
-//Null
-const result = null; // when logged, outputs object but is infact null
-
-//Undefined
-let name;
-
-//Symbol(ES6)
-//will review in ES6 module
-
-console.log("------(typeof variable)-------");
-console.log(typeof text);
-console.log(typeof num);
-console.log(typeof value1);
-console.log(typeof value2);
-console.log(typeof result);
-console.log(typeof name);
-
-console.log("------(typeof value)-------");
-console.log(typeof "hello world"); // output string
-console.log(typeof 5); // output number
+//change value in array:
+friends[3] = 50;
+console.log(friends[3]);
+console.log(friends);
