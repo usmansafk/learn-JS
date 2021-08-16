@@ -1,14 +1,13 @@
-//Equality
-// == === != !==
+//Logical Operators
+// II - OR
+// && - AND
+// ! - NOT
 
-// == checks only value
-// === checks value AND type
+const name = "James";
+const age = 23;
 
-const num1 = 6;
-const num2 = "6";
-
-const value = num1 == num2;
-const value2 = num1 === num2;
-
-console.log(value);
-console.log(value2);
+if (name === "Bob" || age === 23) {
+  console.log("hello there user");
+} else {
+  console.log("wrong values");
+}
