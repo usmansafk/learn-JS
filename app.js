@@ -1,34 +1,33 @@
-//Functions - return
-// default, undefined, shortcuts, ignores after
+//Functions Expressions / Anonymous function
+// functions expressions are another way to define a function!
+// This is done by first creating a variable, then assigning a Function  to the variable (not a value)...  then you can use that variable
+// diff - hoisting, use - arrow func, libraries,
 
-//note
-// - anything after the return statement is ignored
-//- if you do not explicity write what you are returning from a function, you will get undefined inside an array:
-
-//Function that returns my size
-//1 inch = 2.54cm
-
-const myWallHeight = 69;
-
-function calculate(value) {
-  //   const newValue = value * 2.54;
-  //   return newValue;
-  return value * 2.54;
+//Function definition/ declaration
+function addValues(num1, num2) {
+  return num1 + num2;
 }
 
-const width = calculate(50);
-const height = calculate(myWallHeight);
+const firstValue = addValues(3, 4);
+const secondValue = addValues(12, 34);
 
-const dimensions = [width, height];
-console.log(dimensions); // output [127, 175.26]
+//Function Expression
+//with function expression you can also remove the name
+//(known as anonymous function)
+const add = function (num1, num2) {
+  return num1 + num2;
+};
 
-//Write a function that returns inch to cm //1 inch = 2.54cm
+const thirdValue = add(5, 3);
 
-// function inchToCm(inch) {
-//   const cm = 2.54;
-//   const result = inch * cm;
-//   return result;
-// }
+let values = [firstValue, secondValue, thirdValue];
 
-// const myHeight = inchToCm(69.69);
-// console.log(myHeight);
+//can also invoke method directly into array, however make sure the fuctions returns something
+values = [firstValue, secondValue, thirdValue, addValues(2, 2), add(3, 3)];
+console.log(values);
+
+//Arrow Expression -
+//These are ES6 functions
+//Can ONLY be function expressions, unless you pass them in as call backs
+
+const multiply = (num1, num2) => num1 * num2;
