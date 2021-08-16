@@ -1,15 +1,37 @@
-//Template Literals ES6
-// Backtick characters ``
-// Interpolation ${} - insert expression (value).
+//Array Properties & Methods
 
-//String Concat - classic way
-const name = "Usman";
-const age = 24;
-const sentence = "Hey it's " + name + " and he is " + age + " years old";
-console.log(sentence);
+let names = ["Usman", "Hope", "Zade", "Amna"];
 
-const wifeysName = "Hope";
+//Properties -
+//length
+console.log(names.length);
+console.log(names[names.length - 1]); // access the last item in array
 
-//Template Literals - ES6 Way!
-const sentenceTwo = `Hey it's ${wifeysName} and she is ${20 + 4} years old`; //you can insert an expressions inside the the {}
-console.log(sentenceTwo);
+//Methods -
+//concat() - add an array to existing array
+const lastNames = ["Pepper", "Onion", "Banana", "Mango"];
+const fullNames = names.concat(lastNames);
+console.log(fullNames);
+
+//reverse()
+console.log(fullNames.reverse());
+
+//unshift() - insert in beginning of array
+fullNames.unshift("Susy");
+console.log(fullNames);
+
+//shift() - remove from beginning of array
+fullNames.shift();
+console.log(fullNames);
+
+//push() - insert item in end of array
+fullNames.push("Namsu");
+console.log(fullNames);
+
+//pop() - remove last item in end of array
+fullNames.pop();
+console.log(fullNames);
+
+//splice() - grab specific items in array, however mutates original array
+const specificNames = fullNames.splice(2, 3); //first arguement is the starting point, second is option and how many items you want from that point
+console.log(specificNames);
