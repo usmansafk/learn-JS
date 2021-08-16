@@ -1,16 +1,15 @@
-//Variables
-//Store/Access/Modify === Value
-//Declare, Assignment Operator, Assign Value
+// String Concatenation
+// means combining values using +
+// `` back ticks (templates strings) easier option
 
-// Declare Variables with let or CONST or VAR
-var value = "some value";
-let name = "Usman";
-const LASTNAME = "Sajid";
+const fName = "Usman";
+const lName = "Sajid";
+const fullName = fName + " " + lName;
 
-//wont work - CANT reassign or just declare, must init
-// LASTNAME = "lol";
-// const TEST;
+console.log("My name is " + fName + " " + lName);
+console.log("My name is " + fullName);
 
-console.log(value);
-console.log(name);
-console.log(LASTNAME);
+const website = "google";
+const url = "https://www." + website + ".com";
+
+console.log(url);
