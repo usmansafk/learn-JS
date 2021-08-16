@@ -1,29 +1,36 @@
-// Implicit Type Conversion
+// Data Types - 7 Total
+// Primitive — String, Numbers, Boolean, Null, Undefined, Symbol
+// Objects — Arrays, Functions, Objects
 
-// If you do a math operation on a string of all string that are numbers, your output will result in a number and the correct result
-// However, if you use the + sign, the you are doing string concatenation, and it will simply output the numbers one after another
+// the typeof operator — (typeof variable) (typeof value)
 
-const name = "Usman";
-const lastName = "Sajid";
-const fullName = name + " " + lastName;
-console.log(fullName);
+//String
+const text = "some text";
 
-const num1 = 5;
-const num2 = 10;
-const result = num1 + num2;
-console.log(result);
+//Number
+const num = 45;
 
-const value = name - lastName;
-console.log(value);
+//Boolean
+let value1 = true;
+let value2 = false;
 
-let num3 = "2";
-let num4 = "4";
-//100 lines of code later...
-num4 = "pizzas";
-const result2 = num3 + num4;
-console.log(result2);
+//Null
+const result = null; // when logged, outputs object but is infact null
 
-const num5 = parseInt("5"); //this converts the string into an int before the result3 add variable
-const num6 = parseInt("4"); //this converts the string into an int before the result3 add variable
-let result3 = num5 + num6;
-console.log(result3);
+//Undefined
+let name;
+
+//Symbol(ES6)
+//will review in ES6 module
+
+console.log("------(typeof variable)-------");
+console.log(typeof text);
+console.log(typeof num);
+console.log(typeof value1);
+console.log(typeof value2);
+console.log(typeof result);
+console.log(typeof name);
+
+console.log("------(typeof value)-------");
+console.log(typeof "hello world"); // output string
+console.log(typeof 5); // output number
