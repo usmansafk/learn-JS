@@ -1,56 +1,33 @@
-//Switch
-//Another way to write if/else statements
+//Loops
+//🔁 run a block of code while condition is true
+// 1. while loop
+// 2. do-while loop
+// 3. for loop
 
-//dice values: 1 - 6;
+//1. while loop
+let amount = 10;
 
-//if approach:
-// const dice = 1;
-// if (dice === 1) {
-//   console.log("you got 1");
-// }
+while (amount > 0) {
+  console.log("I have " + amount + " dollahs");
+  amount--;
+}
 
-// if (dice === 2) {
-//   console.log("you got 2");
-// }
+//2. do-while loop
+// run code block once, condition second
+// runs at least once
+let money = 12;
 
-// if (dice === 3) {
-//   console.log("you got 4");
-// }
+do {
+  console.log("you have " + money + " dollars");
+  money++;
+} while (money < 10); // output 12, runs at least once
 
-// if (dice === 5) {
-//   console.log("you got 5");
-// }
+//3. for loop
+let i;
+for (i = 0; i < 4; i++) {
+  console.log("and the number is: " + i);
+}
 
-// if (dice === 6) {
-//   console.log("you got 6");
-// }
-
-// if (dice < 1 || dice > 6) {
-//   console.log("you did not roll the dice");
-// }
-
-//switch statement:
-const dice = 1;
-
-switch (dice) {
-  case 1:
-    console.log("you got 1");
-    break;
-  case 2:
-    console.log("you got 2");
-    break;
-  case 3:
-    console.log("you got 3");
-    break;
-  case 4:
-    console.log("you got 4");
-    break;
-  case 5:
-    console.log("you got 5");
-    break;
-  case 6:
-    console.log("you got 6");
-    break;
-  default:
-    console.log("you did not roll the dice");
+for (let number = 5; number >= 0; number--) {
+  console.log("the number is: " + number);
 }
