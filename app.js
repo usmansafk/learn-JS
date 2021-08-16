@@ -1,17 +1,10 @@
-//Functions - declare/invoke
-//Allow you to write code in one place and then reuse that code all throughout your application without having to copy/paste
+//Functions - Parameters, Arguments
 
-//to declare a function, use the function keyword,
-//give it a name,
-//then give it () , these can also take paramaters
-//then open and close curly brace {}
-//inside the braces goes the logic
-
-//declare
-function sayHello() {
-  //logic
-  console.log("Hello");
+function sayHello(name, lastName) {
+  console.log("Hello" + " " + name + " " + lastName);
 }
 
-//to invoke:
-sayHello();
+//greet me
+sayHello("Usman", "Sajid");
+//greet wifey
+sayHello("Hope"); // Hello Hope undefined
