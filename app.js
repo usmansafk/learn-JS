@@ -1,33 +1,42 @@
-//Functions Expressions / Anonymous function
-// functions expressions are another way to define a function!
-// This is done by first creating a variable, then assigning a Function  to the variable (not a value)...  then you can use that variable
-// diff - hoisting, use - arrow func, libraries,
+//Objects
+// are a collection of properties(keys)
+// each key has a value
+// if the property value has a function, then it is called method
 
-//Function definition/ declaration
-function addValues(num1, num2) {
-  return num1 + num2;
-}
-
-const firstValue = addValues(3, 4);
-const secondValue = addValues(12, 34);
-
-//Function Expression
-//with function expression you can also remove the name
-//(known as anonymous function)
-const add = function (num1, num2) {
-  return num1 + num2;
+//Object
+const person = {
+  name: "Usman",
+  age: 24,
+  skin: "brown",
+  hair: "black",
+  isCool: true,
+  education: true,
+  married: true,
+  family: ["Mum", "Dad", "Brother", "Sister"], // array inside an Object
+  greeting: function () {
+    console.log("Hello!");
+  }, // yes- you can store function inside an object!
+  //since ES6 you actually dont even need function keyword for methods inside objects:
+  ES6greeting() {
+    console.log("Hello ES6 style");
+  }
 };
 
-const thirdValue = add(5, 3);
+//accessing the Object:
+//use dot notation
+console.log(person.name); //output: Usman
+console.log(person.family[2]); //output: Brother
+console.log(person.greeting); //outputs full function
 
-let values = [firstValue, secondValue, thirdValue];
+//to run method within object:
+person.greeting(); //output: Hello!
+person.ES6greeting(); //output: Hello ES6 style
 
-//can also invoke method directly into array, however make sure the fuctions returns something
-values = [firstValue, secondValue, thirdValue, addValues(2, 2), add(3, 3)];
-console.log(values);
+//can assign variables from the key/value of an object:
+const myAge = person.age;
+console.log(myAge);
 
-//Arrow Expression -
-//These are ES6 functions
-//Can ONLY be function expressions, unless you pass them in as call backs
-
-const multiply = (num1, num2) => num1 * num2;
+//can modify value of an object:
+person.name = "Usman Sajid";
+console.log(person.name); //outputs: Usman Sajid
+console.log(person); //prints updated name in full object
