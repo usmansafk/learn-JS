@@ -25,3 +25,21 @@
 - **Logical Operators**
 - **Switch Statements**
 - **Loops**
+
+## Section II: Connect The Dots
+
+- **String Properties & Methods**
+- **Template Literals ES6**
+- **Array Properties & Methods**
+- **EXERCISE - Full Name**
+- **EXERCISE - Calculate Total**
+- **String Properties & Methods**
+- **Value Vs Reference**
+- **Null and Undefined**
+- **Truthy / Falsy**
+- **Ternary Operator**
+- **Variable Lookup**
+- 🔑 **CallBack Functions, High Order Functions**
+- 🔑 **Powerful Array Methods-forEach,map,filter,find,reduce**
+- **Math Object**
+- **Date Object**
