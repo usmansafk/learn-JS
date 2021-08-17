@@ -1,37 +1,31 @@
-// Powerful Array Methods:
-// reduce
-// still iterates over and still callback function
-// however, reduces to a single value- Number, array, Object
-// 1 paramter ('acc') - total of all calculations
-// 2 paramter ('curr') - current iteration/ value
+// Math Object
+// Standard built in objects - always available
 
-const people = [
-  {
-    name: "usman",
-    age: 24,
-    position: "dev",
-    id: 1,
-    salary: 200
-  },
-  {
-    name: "peter",
-    age: 25,
-    position: "designer",
-    id: 2,
-    salary: 500
-  },
-  {
-    name: "susan",
-    age: 30,
-    position: "boss",
-    id: 3,
-    salary: 900
-  }
-];
+const num = 4.534525;
+const result = Math.floor(num);
 
-const total = people.reduce(function (acc, curr) {
-  console.log(`Total ${acc}`);
-  console.log(`Current Money ${curr.salary}`);
-  acc += curr.salary;
-  return acc; //ALWAYS MUST RETURN FIRST PARAM, THE TOTAL, YOU MUST DO THIS!
-}, 0); // the 0 is the initial value
+const result2 = Math.floor(8.999); //always rounds down
+
+const result3 = Math.ceil(3.32235); //always rounds up
+
+const num2 = 25;
+const result4 = Math.sqrt(num2); //square root
+
+const result5 = Math.PI; //3.14
+
+const result6 = Math.min(2, 5, 4, 6, 32, 99, 4); //min num
+
+const result7 = Math.max(2, 5, 4, 6, 32, 99, 4); //max num
+
+const result8 = Math.random(); // random num from 0 and never 1
+const result9 = Math.floor(Math.random() * 10 + 1); // random WHOLE num from 1 to 10,
+
+console.log(result); //4
+console.log(result2); //8
+console.log(result3); //4
+console.log(result4); //5
+console.log(result5); //3.141592653589793
+console.log(result6); //2
+console.log(result7); //99
+console.log(result8); //0.3367446480090155
+console.log(result9); //random from 1 - 10
