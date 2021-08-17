@@ -1,44 +1,37 @@
 // Powerful Array Methods:
-// find --
-// returns single instance - in this case object
-// returns just the first match, if no match then returns undefined
-// great for getting a unique value
+// reduce
+// still iterates over and still callback function
+// however, reduces to a single value- Number, array, Object
+// 1 paramter ('acc') - total of all calculations
+// 2 paramter ('curr') - current iteration/ value
 
 const people = [
   {
     name: "usman",
     age: 24,
     position: "dev",
-    id: 1
+    id: 1,
+    salary: 200
   },
   {
     name: "peter",
     age: 25,
     position: "designer",
-    id: 2
+    id: 2,
+    salary: 500
   },
   {
     name: "susan",
     age: 30,
     position: "boss",
-    id: 3
+    id: 3,
+    salary: 900
   }
 ];
 
-const findById = people.find(function (person) {
-  return person.id === 3;
-});
-
-const findMe = people.find(function (person) {
-  return person.name === "usman";
-});
-
-console.log(findMe);
-console.log(findById);
-
-//filter is different from find as it returns a new array and for you to access an item, you must first give the index position:
-const findMe2 = people.filter(function (person) {
-  return person.name === "usman";
-});
-
-console.log(findMe2[0].name);
+const total = people.reduce(function (acc, curr) {
+  console.log(`Total ${acc}`);
+  console.log(`Current Money ${curr.salary}`);
+  acc += curr.salary;
+  return acc; //ALWAYS MUST RETURN FIRST PARAM, THE TOTAL, YOU MUST DO THIS!
+}, 0); // the 0 is the initial value
