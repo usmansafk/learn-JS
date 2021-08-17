@@ -5,7 +5,8 @@
 - This course is all the material from my Udemy Course by JohnsMilga
   -It includes tutorials, labs, tasks and mini projects
 
-- 🔑 Notes:
+🔑 Notes:
+
 - JavaScript is a loosely typed langauge. This means that when you declare a variable, you do not need to specify the data type
 
 ## Section I: JavaScript Fundamentals
