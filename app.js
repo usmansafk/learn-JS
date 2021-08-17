@@ -1,8 +1,9 @@
 //Powerful Array Methods
-//forEach, map, filter, find, reduce
-
-//forEach - does NOT return new array
-//iterates over the array and then you decide what you want to do
+//map -
+// most powerful and popular array method, used in frameworks like REACT
+// does returns a new array, unlike forEach
+// does not change size of original array, unlike filter
+// use values from original array when making new one
 
 const people = [
   {
@@ -22,13 +23,32 @@ const people = [
   }
 ];
 
-function showPerson(person) {
-  console.log(person.position.toUpperCase()); //inside the function, you can access each item and you can code any logic!
-}
-people.forEach(showPerson); // do NOT invoke it with ()
-
-//OR --- you can do it one together using anonymous function (more popular) >>>
-people.forEach(function (item) {
-  console.log(item.position.toLowerCase());
+//example 1 -
+const ages = people.map(function (person) {
+  return person.age;
 });
-//furthermore, this approach is now improved via arrow function, covered more later.
+
+//example 2 -
+const newPeople = people.map(function (person) {
+  return {
+    firstName: person.name.toUpperCase(),
+    oldAge: person.age + 20 // can include any logic
+  };
+});
+
+//map is EXTREMELY useful
+//example task 3 -
+//iterate over the peoples array using map
+// extract the name value
+//place it in a h1
+//display it on the screen
+const names = people.map(function (person) {
+  return `<h1>${person.name}</h1>`;
+});
+
+document.body.innerHTML = names.join("");
+
+//logging each to console
+console.log(`Ages: ${ages}`);
+console.log(newPeople);
+console.log(names);
