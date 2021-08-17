@@ -1,31 +1,37 @@
-// Math Object
-// Standard built in objects - always available
+// Date Object
 
-const num = 4.534525;
-const result = Math.floor(num);
+const months = [
+  "Jan",
+  "Feb",
+  "Mar",
+  "Apr",
+  "May",
+  "Jun",
+  "Jul",
+  "Aug",
+  "Sep",
+  "Oct",
+  "Nov",
+  "Dec"
+];
 
-const result2 = Math.floor(8.999); //always rounds down
+const days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
 
-const result3 = Math.ceil(3.32235); //always rounds up
+const date = new Date();
+const day = date.getDay();
+const todaysDate = date.getDate();
+const month = date.getMonth();
+const year = date.getFullYear();
 
-const num2 = 25;
-const result4 = Math.sqrt(num2); //square root
+console.log(days[day - 1]);
+console.log(todaysDate);
+console.log(months[month - 1]);
+console.log(year);
 
-const result5 = Math.PI; //3.14
+const str = `Today is ${days[day - 1]}, ${todaysDate} ${
+  months[month - 1]
+} ${year}`;
 
-const result6 = Math.min(2, 5, 4, 6, 32, 99, 4); //min num
+console.log(str);
 
-const result7 = Math.max(2, 5, 4, 6, 32, 99, 4); //max num
-
-const result8 = Math.random(); // random num from 0 and never 1
-const result9 = Math.floor(Math.random() * 10 + 1); // random WHOLE num from 1 to 10,
-
-console.log(result); //4
-console.log(result2); //8
-console.log(result3); //4
-console.log(result4); //5
-console.log(result5); //3.141592653589793
-console.log(result6); //2
-console.log(result7); //99
-console.log(result8); //0.3367446480090155
-console.log(result9); //random from 1 - 10
+document.body.innerHTML = str;
