@@ -1,42 +1,34 @@
-// CallBack Functions, High Order Functions, Functions as First Class Objects/ Citizens
+//Powerful Array Methods
+//forEach, map, filter, find, reduce
 
-// Functions are first class objects - stored in a variable (expression), passed as an argument to another function, return from the function (closure)
-// High Order Functions - accepts another function as an argument or returns another function as a result
-// Callback Functions - passed to a another function as an argument and executed inside that function
+//forEach - does NOT return new array
+//iterates over the array and then you decide what you want to do
 
-// function greetMorning(name) {
-//   const myName = "namsu";
-//   console.log(`Good morning ${name}, my name is ${myName}`);
-// }
-// function greetAfternoon(name) {
-//   const myName = "namsu";
-//   console.log(`Good afternoon ${name}, my name is ${myName}`);
-// }
-// greetMorning("bobo");
-// greetAfternoon("peter");
+const people = [
+  {
+    name: "bob",
+    age: 20,
+    position: "dev"
+  },
+  {
+    name: "peter",
+    age: 25,
+    position: "designer"
+  },
+  {
+    name: "susan",
+    age: 30,
+    position: "boss"
+  }
+];
 
-//this is poor as it is rather repetitive, instead use callback function;
-//this is done via creating one High Order Function, and multiple Call Back Functions
-
-//The High Order Function is Universal
-function greet(name, callback) {
-  const myName = "namsu";
-  console.log(`${callback(name)}, my name is ${myName}`);
+function showPerson(person) {
+  console.log(person.position.toUpperCase()); //inside the function, you can access each item and you can code any logic!
 }
+people.forEach(showPerson); // do NOT invoke it with ()
 
-//Call Back Functions:
-function morning(name) {
-  return `Good Morning ${name.toUpperCase()}`;
-}
-
-function afternoon(name) {
-  return `Good Afternoon ${name.repeat(3)}`;
-}
-
-function evening(name) {
-  return `Good Evening ${name.toLowerCase()}`;
-}
-
-greet("Usman", morning);
-greet("Hope", afternoon);
-greet("Rija", evening);
+//OR --- you can do it one together using anonymous function (more popular) >>>
+people.forEach(function (item) {
+  console.log(item.position.toLowerCase());
+});
+//furthermore, this approach is now improved via arrow function, covered more later.
