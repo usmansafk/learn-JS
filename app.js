@@ -1,36 +1,18 @@
-// EXERCISE - Calculate Total
-// Functions, return, if, arrays for loop
+//Reference vs Value
 
-//create a function that iterates over an array and returns total
+//**🔑 when assigning primitive data type value to a variable, any changes are made directly to that value, without affecting the original value**
+//**🔑 when assigning non-primitive data type value to a variable, it is done by reference so any changes will affect ALL the references - original reference as well**
 
-const gas = [20, 40, 100];
-const food = [10, 20, 30, 5];
+//primitive
+let number = 1;
+let number2 = number;
+number2 = 2;
+console.log(`The first number is ${number}`); //The second number is 1
+console.log(`The second number is ${number2}`); //The second number is 2
 
-function calcTotal(arr) {
-  let total = 0;
-  for (let i = 0; i < arr.length; i++) {
-    total += arr[i];
-  }
-
-  //insert an if statement, if expenditure is greater than 100, alert!
-  if (total > 100) {
-    console.log(`Whoa! You're spending way too much`);
-    return total;
-  }
-  console.log(`You're spending is good. You've spent less than 100`);
-  return total;
-}
-
-const gasTotal = calcTotal(gas);
-// console.log(gasTotal);
-const foodTotal = calcTotal(food);
-// console.log(foodTotal);
-const randomTotal = calcTotal([50, 23, 2]);
-// console.log(randomTotal);
-
-// assign each total into an object and log it:
-console.log({
-  gas: gasTotal,
-  food: foodTotal,
-  random: randomTotal
-});
+//object
+let person = { name: "bob" };
+let person2 = person;
+person2.name = "susan";
+console.log(`The name of the first person is ${person.name}`); //The name of the second person is susan <-- changed original value
+console.log(`The name of the second person is ${person2.name}`); //The name of the second person is susan
