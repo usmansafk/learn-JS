@@ -1,9 +1,18 @@
-// window object - browser api - the browser giving options to work with the browser
-// document
-// console.dir - allows you to see all the properties and methods available for the node object you have selected
+//getElementById()
+// Select the element or group of elements, the ones we want
+// Decide the effect we want to apply to the selection
 
-console.dir(document);
+// getElementById("element");
 
-// In this case, all the properties and methods on the document objectt that can be accessed
+//change the colour of the title text using getElementById()
+//method 1 - directly changing it
+document.getElementById("title").style.color = "green";
 
-// *The window represents the current tab ~ the document represents the current HTML DOCTYPE page*
+//method 2 (preferred) - using a variable
+const heading = document.getElementById("title");
+heading.style.color = "red";
+
+//now, change the bgc and color of the button using method 2
+const clickMeBtn = document.getElementById("btn");
+clickMeBtn.style.backgroundColor = "pink";
+clickMeBtn.style.color = "red";
