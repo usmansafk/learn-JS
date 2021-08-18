@@ -1,31 +1,22 @@
-// querySelector() and querySelectorAll()
-// querySelector('any css') - selects single
-// querySelectorAll('any css') - selects all - can also use forEach()
-// you MUST pass in either . for class or # for id or any CSS selection
+// Navigate the DOM - children
+//There will be times were you can not directly select an element through the previous selector methods. We will be therefore have to navigate the DOM tree- known as Traverse the DOM tree
 
-//JSYK, you can do this also simply by getElementById()
-const result = document.querySelector("#result");
-result.style.backgroundColor = "silver";
+// childNodes - returns all childNodes including whitespace which is treated as a text node
+// - children - returns actual children
+// - firstChild - returns first child HOWEVER with whitespace
+// - lastChild - returns last child HOWEVER with whitespace
 
-const item = document.querySelector(".special");
-console.log(item);
-//you would think this would print ALL the special classed items, however no!
-//querySelector() only returns the first instance
-//you must use querySelectorAll() if you want to return the whole list
+// Steps:
 
-const lastItem = document.querySelector("li:last-child"); // you can access via very specific css like so
-console.log(lastItem);
+// 1. Select the highest parent element and then navigate the DOM Tree
+// 2. To select the children of the parent you must use the childNodes, firstChild and lastChild or **children**
+// 3. Note: childNodes, firstChild and lastChild returns childNodes including whitespace which is treated as a text node
 
-const specialList = document.querySelectorAll(".special");
-console.log(specialList);
-//from here you can use forEach() even though it is a node-list object
-//this is because it uses the querySelectorAll() method
+const result = document.getElementById("result");
 
-specialList.forEach(function (item) {
-  console.log(item);
-  item.style.color = "blue";
-  item.style.fontSize = "25px";
-});
+console.log(result.childNodes); // this returns everything including text whitespace
+console.log(result.firstChild); // same here
+console.log(result.lastChild); // same here
 
-//Summary --
-//Therefore, technically you may replace any previous selector so that you do not have the need to change the node-list to array-list
+//better way -- use children property -- return actual chidlren without text whitespace:
+console.log(result.children);
