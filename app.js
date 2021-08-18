@@ -1,22 +1,10 @@
-//Navigate the DOM - previousSibling and nextSibling
-//returns whitespace
+//Navigate the DOM - previousElementSibling and nextElementSibling
+//returns NO whitespace
 
-// Siblings are those which are equal in the DOM structure
-// When you use these properties, the first entry will be a empty text whitespace. Hence you must use the property again to get the correct element:
+//subtle difference and **easier** from previousSibling and nextSibling!!!
+// You can grab the next element immediately with ease and not worry about white space
 
-const first = document.querySelector(".first"); //notice -- don't forget the . as it references a class
-// console.log(first); // always log if you are ever unsure and to make sure you have selected properly and/or get the correct data set
-
-// let second = first.nextSibling;
-//lets say, you want to see the next sibling to element, use nextSibling property
-// console.log(second);
-//this will originally return text whitespace
-
-//hence:
-const second = first.nextSibling.nextSibling;
-second.style.color = "red"; // changing the colour of list item 2 to red
-console.log(second);
-
+const first = document.querySelector(".first");
+first.nextElementSibling.style.color = "green";
 const last = document.querySelector("#last");
-const third = (last.previousSibling.previousSibling.style.color = "blue"); // changing the colour of list item 3 to blue
-console.log(third);
+last.previousElementSibling.style.color = "blue";
