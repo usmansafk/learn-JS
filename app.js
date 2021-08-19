@@ -1,10 +1,12 @@
-//Navigate the DOM - previousElementSibling and nextElementSibling
-//returns NO whitespace
+//nodeValue and textContent
+//both do the same thing - allow you to access the text property within the element
 
-//subtle difference and **easier** from previousSibling and nextSibling!!!
-// You can grab the next element immediately with ease and not worry about white space
+const item = document.getElementById("special");
 
-const first = document.querySelector(".first");
-first.nextElementSibling.style.color = "green";
-const last = document.querySelector("#last");
-last.previousElementSibling.style.color = "blue";
+//nodeValue is a bit more tricky
+const value = item.firstChild.nodeValue;
+console.log(value);
+
+//textContent is easier as it does not have the extra step of looking via child
+const easyValue = item.textContent;
+console.log(easyValue); // preferred/ easier
