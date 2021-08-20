@@ -1,27 +1,31 @@
-//getAttribute() and setAttribute() methods
+// classList and className
+//How to add Css classes dynamically to our element using JS
+// they allow you to apply/move/check if classes on an element
 
-//li one
-const first = document.querySelector(".first"); //selectors
-const classValue = first.getAttribute("class"); //get attribute prints value of class here
-const idValue = first.getAttribute("id"); //get attribute prints value of id here
-console.log(first); //prints out whole html lime
-console.log(classValue);
-console.log(idValue);
-console.log(first.textContent); //prints whats inside the element
+const first = document.getElementById("first");
+const second = document.getElementById("second");
+const third = document.getElementById("third");
 
-//a tag
-// const link = document.getElementById("link"); //selectors or...
-const link = document.querySelector("#link"); //selectors - can do any selector
-const showLink = link.getAttribute("href"); //get attribute prints value of href here
-console.log(link); //prints out whole html line
-console.log(showLink); //www.google.co.uk
+const classValue = first.className;
+// console.log(classValue);
 
-//li two
-const last = link.nextElementSibling; //using previously covered property
-last.setAttribute("class", "first"); // first param is type of element, second is the value!!
-last.textContent = "I also have the class of first now"; //UPDATING THE TEXT INSIDE THE 2ND LI ITEM
-console.log(last); //prints out whole html line
-console.log(last.textContent);
+second.className = "text"; //adds text CSS class to the second heading,
+second.className = "colors"; // if you want to add another css class to it later in the code, say text AND colors, you CAN'T do it this way as it simply over rides
+second.className = "text colors"; // you can do both like this if you know the styling right away
 
-const totalLi = document.querySelectorAll(".first"); //we now have 2 .first class elements in node list
-console.log(totalLi);
+//Hence use classList - example on third heading:
+third.classList.add("colors");
+//some code here...
+third.classList.add("text"); //later on the code you can also add this css using classLists .add() method
+third.classList.add("text", "colors"); // to add multiple classes im the one line using classList, separate with comma ,
+third.classList.remove("text"); // can also remove - removes text
+
+let result = third.classList.contains("colors"); // another classList method to see if element exists
+console.log(result); // true
+if (result) {
+  console.log("class exists in element"); // prints tthis
+} else {
+  console.log("class does not exists in element");
+}
+
+console.log(third.classList); //you can view all the classes on element through logging
