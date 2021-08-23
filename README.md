@@ -26,6 +26,7 @@
 - **Logical Operators**
 - **Switch Statements**
 - **Loops**
+  <br><br/>
 
 ## Section II: Connect The Dots
 
@@ -44,3 +45,56 @@
 - 🔑 **Powerful Array Methods-forEach,map,filter,find,reduce**
 - **Math Object**
 - **Date Object**
+
+<br><br/>
+
+## Section III: DOM
+
+- **DOM Intro**
+- **DOM General Concepts**
+- **Window AND Document Overview**
+
+### Selectors
+
+_Steps for any selector:_
+
+1. Select the element or group of elements, the ones we want to modify.
+2. Then decide the effect we want to apply to the selection
+
+- **getElementById()**
+- **getElementByTagName()**
+- **getElementByClassName()**
+- **querySelector() and querySelectorAll()**
+  <br><br/>
+- **Converting an element from NodeList Object to Array List Object**
+
+### Navigate the DOM
+
+- **children**
+- **parent**
+- **previousSibling and nextSibling**
+- **previousElementSibling and nextElementSibling**
+  <br><br/>
+- **nodeValue and textContent**
+
+### Dynamic Changes
+
+Getting and Setting Attributes
+
+- **getAttribute() and setAttribute() methods**
+- **ClassList and ClassName**
+
+### How to add elements from the DOM (dynamically)
+
+- **createElement and .appendChild(childElement)**
+- **.insertBefore("element", "location")**
+- **.replaceChild("new", "old")**
+  <br><br/>
+- **prepend() and innerText**
+
+How to remove elements from the DOM
+
+- **remove() and removeChild()**
+  <br><br/>
+- **innerHTML and textContent**
+- **style Property vs ClassList**
