@@ -1,31 +1,29 @@
-// classList and className
-//How to add Css classes dynamically to our element using JS
-// they allow you to apply/move/check if classes on an element
+// How to add elements Directly/ dynamically
+// Steps:
+// createElement("element")
+// createTextNode("text content")
+// element.appendChild(childElement)
 
-const first = document.getElementById("first");
-const second = document.getElementById("second");
-const third = document.getElementById("third");
+const result = document.querySelector("#result");
 
-const classValue = first.className;
-// console.log(classValue);
+//create empty element:
+const bodyDiv = document.createElement("div");
 
-second.className = "text"; //adds text CSS class to the second heading,
-second.className = "colors"; // if you want to add another css class to it later in the code, say text AND colors, you CAN'T do it this way as it simply over rides
-second.className = "text colors"; // you can do both like this if you know the styling right away
+//create text node:
+const text = document.createTextNode("a simple body div");
 
-//Hence use classList - example on third heading:
-third.classList.add("colors");
-//some code here...
-third.classList.add("text"); //later on the code you can also add this css using classLists .add() method
-third.classList.add("text", "colors"); // to add multiple classes im the one line using classList, separate with comma ,
-third.classList.remove("text"); // can also remove - removes text
+//then append the text to the body div.
+//but! first need to insert(append) the text into div:
+bodyDiv.appendChild(text); // adding the textnode to the body div
 
-let result = third.classList.contains("colors"); // another classList method to see if element exists
-console.log(result); // true
-if (result) {
-  console.log("class exists in element"); // prints tthis
-} else {
-  console.log("class does not exists in element");
-}
+//then, append to body element:
+document.body.appendChild(bodyDiv); //the bodyDiv gets appended to the body element
 
-console.log(third.classList); //you can view all the classes on element through logging
+//example 2:
+const heading = document.createElement("h1");
+const textHeading = document.createTextNode("Dynamic Heading");
+heading.appendChild(textHeading);
+heading.classList.add("red"); //> you can now even add class to the heading as it is on the DOM:
+result.appendChild(heading); //adding heading to the body tag
+
+console.log(result.children);
