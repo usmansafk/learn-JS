@@ -1,25 +1,20 @@
-// innerHTML and textContent: similarities and differences
-// Easiest approach
-// using these properties is much more efficient than insert than insertTextNode etc
-//Note: there are times where you will use either the innerHTML or textContent, depending on circumstance. If you want to make changes with propper  HTML structure, not just text, then you must use innerHTML -  see Task Example below
-const list = document.getElementById("first");
-const div = document.getElementById("second");
-const item = document.querySelector(".item");
+//Change CSS with style property
+// - Up until now to make changes we have been using CSS property to showcase the changes we are making via JS.
+// - We would select element and use style property to make changes
+// - Although theres nothing wrong with this property - there is another better approach
+// - There are downsides to CSS property - whereas classList would be a better option
 
-console.log(div.textContent); // can see the text inside the div
-console.log(list.innerHTML); // can see the whole HTML content, not just the text
-console.log(list.textContent); // can see the text inside the list
+const random = document.querySelector(".random");
+console.log(random.style); //can see all the CSS style properties that you can do
+//the down size to this approach, you have to add a property one by one:
+// random.style.background = "blue";
+// random.style.color = "white";
+// random.style.fontSize = "3rem";
+// random.style.textTransform = "capitalize";
+//this is too long winded
 
-//Task - create another ul, and grab all the list items - FASTER way!
-const ul = document.createElement("ul");
-//instead of creating a textNode and then appending the child etc..., simply:
-ul.innerHTML = `<li class="item">list item</li><li>list item</li><li>list item</li>`; // we are simply copying and pasting from the HTML!! this is the approach in real life projects
-//also make sure to use template strings (back ticks ``) as it will allow you to name your classes and ids etc with "" and also allow you to pass in dynamic values, see below
-document.body.appendChild(ul);
-
-const randomVar =
-  "random value inserted as item using expression and template strings";
-
-const ol = document.createElement("ol");
-ol.innerHTML = `<li class="item">list item</li><li>list item</li><li>${randomVar}</li>`;
-document.body.appendChild(ol);
+//therefore use, classList approach:
+random.classList.add("title");
+//this has 2 benefits.:
+//Separated the CSS to the proper area.
+//You can access it in one line
