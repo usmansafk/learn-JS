@@ -79,7 +79,7 @@ _Steps for any selector:_
 
 ### Dynamic Changes
 
-Getting and Setting Attributes
+Getting and Setting Attributes:
 
 - **getAttribute() and setAttribute() methods**
 - **ClassList and ClassName**
@@ -92,7 +92,7 @@ Getting and Setting Attributes
   <br><br/>
 - **prepend() and innerText**
 
-How to remove elements from the DOM
+How to remove elements from the DOM:
 
 - **remove() and removeChild()**
   <br><br/>
