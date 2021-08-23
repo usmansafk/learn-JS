@@ -1,28 +1,28 @@
-// 1. select element
-// 2. addEventListener() - has two params:
-// 3. what event, callback function (what to do)
+//Mouse-Events
+// click - fires after full action occurs (will be used in most cases)
+//  these are very specific :
+// mousedown - button is pressed
+// mouseup - button is released
+// mouseenter - moved onto an element (when you hover over the element)
+// mouseleave - moved onto out of an element (when you hover off the element)
 
-//The reason for callback functions as we do not want the function to run right away, but instead when an event occurs
-//you can either pass in an anonymous function OR create a function and reference it
-
-//Function Expression:
-
-const btn = document.querySelector(".btn");
 const heading = document.querySelector("h1");
+const button = document.querySelector(".btn");
 
-//Task
-//Using function expression,
-//add some logic: when button is clicked check if class is there. If yes, then remove class. If not, add the class.
+button.addEventListener("click", function () {
+  console.log("you clicked me");
+}); //FIRES 3RD
+button.addEventListener("mousedown", function () {
+  console.log("down");
+}); //FIRES 1ST
+button.addEventListener("mouseup", function () {
+  console.log("up");
+}); //FIRES 2ND
 
-function changeColours() {
-  const hasClass = heading.classList.contains("red");
-
-  if (hasClass) {
-    heading.classList.remove("red");
-  } else {
-    heading.classList.add("red");
-  }
-  //voila! you have just made a toggle!
-}
-
-btn.addEventListener("click", changeColours); // do NOT invoke it right away with ()
+heading.addEventListener("mouseenter", function () {
+  heading.classList.add("blue");
+});
+heading.addEventListener("mouseleave", function () {
+  heading.classList.remove("blue");
+});
+//voila! you just learned how to create hover effect using js!
