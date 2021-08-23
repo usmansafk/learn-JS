@@ -5,7 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Usman Sajid</title>
-    <style></style>
+    <style>
+      .red {
+        background-color: red;
+        color: white;
+        text-transform: uppercase;
+        font-size: 2rem;
+      }
+      .blue {
+        background-color: blue;
+        color: white;
+        text-transform: capitalize;
+        letter-spacing: 10px;
+      }
+      .btn {
+        background-color: #f15025;
+        color: white;
+        font-size: 1.2rem;
+        border: none;
+        border-radius: 10%;
+        cursor: pointer;
+      }
+    </style>
   </head>
 
   <body>
@@ -21,9 +42,11 @@
 
     <h3>Tutorial:</h3>
     <h1>Events in JS</h1>
-    <p>Hey, I can trigger an event!</p>
     <button class="btn">click me!</button>
-
+    <!-- javascript -->
+    <p onclick="this.classList.add('blue')">
+      this is the old syntax for js events
+    </p>
     <script src="app.js"></script>
   </body>
 </html>
