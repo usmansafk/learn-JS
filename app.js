@@ -1,29 +1,30 @@
-// How to add elements Directly/ dynamically
+//.insertBefore()
+
+// (How to add elements directly/ dynamically
 // Steps:
-// createElement("element")
-// createTextNode("text content")
-// element.appendChild(childElement)
+//createElement("element")
+//createTextNode("text content")
+
+// element.appendChild(childElement) ---> note: they are other methods besides appendChild to place elements, like:
+// .insertBefore("element", "location")
 
 const result = document.querySelector("#result");
 
-//create empty element:
-const bodyDiv = document.createElement("div");
+const first = document.querySelector(".blue");
 
-//create text node:
-const text = document.createTextNode("a simple body div");
-
-//then append the text to the body div.
-//but! first need to insert(append) the text into div:
+const bodyDiv = document.createElement("div"); //create empty element:
+const text = document.createTextNode("a simple body div"); //create text node:
 bodyDiv.appendChild(text); // adding the textnode to the body div
-
-//then, append to body element:
-document.body.appendChild(bodyDiv); //the bodyDiv gets appended to the body element
+//INSTEAD USE .insertBefore() here:
+document.body.insertBefore(bodyDiv, result);
 
 //example 2:
 const heading = document.createElement("h1");
 const textHeading = document.createTextNode("Dynamic Heading");
 heading.appendChild(textHeading);
 heading.classList.add("red"); //> you can now even add class to the heading as it is on the DOM:
-result.appendChild(heading); //adding heading to the body tag
+
+//INSTEAD USE .insertBefore() here:
+result.insertBefore(heading, first);
 
 console.log(result.children);
