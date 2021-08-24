@@ -1,27 +1,42 @@
-// - Web Storage API - provided by Browser
-// - session Storage, local Storage
-// - setItem, getItem, removeItem, clear
+// Local Storage with Multiple Values
+// JSON.stringify() , JSON.parse()
+// JSON allows you to store more than just strings...
 
-// The are essentially the same except, sessionStorage() store data during opening/closing of tabs whilst localStorage() stores data during opening/closing of browser
-// Both of them store data with key - value pairs and have same methoods
+const friends = ["usman", "hope", "rija"];
 
-// localStorage.setItem("name", "john");
-// sessionStorage.setItem("name", "john");
+localStorage.setItem("friends", friends); // stores he friends but not as array - just a string!
 
-localStorage.setItem("name", "john");
-localStorage.setItem("name", "peter"); // overrides
-localStorage.setItem("job", "Software Engineer");
-localStorage.setItem("address", "121 Utah");
+const values = localStorage.getItem("friends");
+console.log(values[0]); // since it is a string only prints first letter "u"
 
-// GET - localStorage.getItem(key)
-const name = localStorage.getItem("name");
-console.log(name);
+//solution - JSON
+//use JSON.stringify - convert value to JSON
+//then use JSON.parse to get back original value
 
-//REMOVE - localStorage.removeItem(key)
-localStorage.removeItem("name");
+const cars = ["bmw", "audi", "lambo"];
 
-const anotherName = localStorage.getItem("name");
-console.log(anotherName); // null as we removed "name" in line 21
+localStorage.setItem("cars", JSON.stringify(cars)); // now stored as array - make sure to use JSON.stringify()
 
-//REMOVE ALL (Clear) - localStorage.clear()
-localStorage.clear();
+const carValues = JSON.parse(localStorage.getItem("cars")); // must use JSON.parse() when accessing the values!
+console.log(carValues[1]); //audi
+
+//check if value is in local storage -
+//if it is then assign it
+//if it isn't then return empty array
+
+let fruits;
+
+if (localStorage.getItem("fruits")) {
+  fruits = JSON.parse(localStorage.getItem("fruits"));
+} else {
+  fruits = [];
+}
+
+console.log(fruits);
+
+// fruits.push("apple");
+fruits.push("orange");
+fruits.push("orange");
+fruits.push("orange");
+
+localStorage.setItem("fruits", JSON.stringify(fruits));
