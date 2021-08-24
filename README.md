@@ -1,3 +1,6 @@
+
+<img width="135" alt="Screenshot 2021-08-24 at 16 26 27" src="https://user-images.githubusercontent.com/67691352/130645046-e173d31c-1a43-4ec1-8e11-a17bad56546a.png">
+
 # JavaScript
 
 - Welcome to my learn-JavaScript Repo
