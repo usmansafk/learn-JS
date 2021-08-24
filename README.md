@@ -98,3 +98,27 @@ How to remove elements from the DOM:
   <br><br/>
 - **innerHTML and textContent**
 - **style Property vs ClassList**
+
+## Section IV: Events
+
+- **Event Overview**
+  <br><br/>
+
+**The core principles for any event is as follows:**
+
+1. select element
+2. addEventListener()
+3. (what event, what to do)
+   <br><br/>
+
+- **Click Event**
+- **Function Reference**
+- **Mouse Events**
+- **Key Events**
+- **Event Object Argument**
+- **CurrentTarget vs Target**
+- **Event Bubbling Capturing**
+  <br><br/>
+- **Form Submit**
+- **Local Storage**
+- **Local Storage with Multiple Values - JSON.stringify() , JSON.parse()**
